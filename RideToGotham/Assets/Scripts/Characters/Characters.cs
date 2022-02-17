@@ -51,15 +51,15 @@ public class Characters : MonoBehaviour
 
     protected virtual void BruceMovement()
     {
-        //rb.MovePosition(transform.position + speed * Time.deltaTime * dir);
-        //if (dir != Vector3.zero)
-        //{
-            //this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(dir), 0.15f);
-            //animator.SetBool("isWalking", true);
-        //}
-        //else
-       // {
-            //animator.SetBool("isWalking", false);
-       // }
+        rb.MovePosition(transform.position + speed * Time.deltaTime * dir);
+        if (dir != Vector3.zero)
+        {
+            this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(dir), 0.15f);
+            animator.SetBool("isWalking", true);
+        }
+        else
+        {
+            animator.SetBool("isWalking", false);
+        }
     }
 }
