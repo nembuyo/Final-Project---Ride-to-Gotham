@@ -36,10 +36,30 @@ public class Characters : MonoBehaviour
         {
             animator.SetBool("isWalking", false);
         }
+
+        if(Input.GetKey(KeyCode.R))
+        {
+            speed = 3;
+            animator.SetBool("isRunning", true);
+        }
+        else
+        {
+            speed = 1;
+            animator.SetBool("isRunning", false);
+        }
      }    
 
-    protected virtual void NPCMovement()
+    protected virtual void BruceMovement()
     {
-        rb.MovePosition(transform.position + speed * Time.deltaTime * dir);
+        //rb.MovePosition(transform.position + speed * Time.deltaTime * dir);
+        //if (dir != Vector3.zero)
+        //{
+            //this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(dir), 0.15f);
+            //animator.SetBool("isWalking", true);
+        //}
+        //else
+       // {
+            //animator.SetBool("isWalking", false);
+       // }
     }
 }
