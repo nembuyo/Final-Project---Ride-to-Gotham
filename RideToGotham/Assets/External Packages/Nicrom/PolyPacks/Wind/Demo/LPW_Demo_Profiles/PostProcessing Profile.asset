@@ -22,7 +22,7 @@ MonoBehaviour:
     defaultState: 1
   intensity:
     overrideState: 1
-    value: 0.15
+    value: 0.18
   fastMode:
     overrideState: 0
     value: 0
@@ -41,9 +41,9 @@ MonoBehaviour:
   settings:
   - {fileID: 8199546650461384630}
   - {fileID: 9188083746926535695}
-  - {fileID: 7533027323642187236}
   - {fileID: -1833495347651927373}
---- !u!114 &7533027323642187236
+  - {fileID: 7944717789491681273}
+--- !u!114 &7944717789491681273
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -61,28 +61,28 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 6.61
+    value: 4.73
   threshold:
     overrideState: 0
-    value: 60.26
+    value: 1
   softKnee:
-    overrideState: 1
-    value: 0.74
+    overrideState: 0
+    value: 0.5
   clamp:
     overrideState: 0
-    value: 65472
+    value: 65498.53
   diffusion:
     overrideState: 1
-    value: 1
+    value: 7.04
   anamorphicRatio:
     overrideState: 0
-    value: -1
+    value: 0
   color:
-    overrideState: 0
-    value: {r: 0, g: 1, b: 0.27328634, a: 1}
-  fastMode:
     overrideState: 1
-    value: 1
+    value: {r: 1, g: 1, b: 1, a: 1}
+  fastMode:
+    overrideState: 0
+    value: 0
   dirtTexture:
     overrideState: 0
     value: {fileID: 0}
@@ -143,19 +143,19 @@ MonoBehaviour:
     value: 1
   temperature:
     overrideState: 1
-    value: -18.1
+    value: -27.8
   tint:
     overrideState: 0
-    value: 97.64
+    value: -0.1
   colorFilter:
     overrideState: 0
-    value: {r: 1, g: 1, b: 1, a: 1}
+    value: {r: 0.49279103, g: 0.8719032, b: 0.9245283, a: 1}
   hueShift:
     overrideState: 0
-    value: 0
+    value: -12.8
   saturation:
     overrideState: 1
-    value: 23.9
+    value: 37.55
   brightness:
     overrideState: 0
     value: 0
@@ -1422,10 +1422,10 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 0.45
+    value: 0.2
   color:
     overrideState: 1
-    value: {r: 0.06512145, g: 0.047837302, b: 0.4056604, a: 1}
+    value: {r: 0.06867347, g: 0.04579032, b: 0.29803923, a: 1}
   ambientOnly:
     overrideState: 0
     value: 1
@@ -1440,7 +1440,7 @@ MonoBehaviour:
     value: -12
   thicknessModifier:
     overrideState: 1
-    value: 1.58
+    value: 5.1
   directLightingStrength:
     overrideState: 0
     value: 0

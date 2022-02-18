@@ -1,40 +1,57 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Events;
 using UnityEngine;
 
 public class Bruce : Characters
 {
+    [SerializeField] private MoveBoat boat;
+    [SerializeField] private Transform Boat;
+    [SerializeField] private Transform Dock;
+    
     [SerializeField] private Transform Player;
+    [SerializeField] private float counter = 10f;
 
-    private void OnCollisionEnter(Collision collision)
+    private void Start()
     {
-        if (collision.gameObject.tag == "Player")
-        {
-            animator.SetBool("isBeingTalkedTo", true);
-        }
+        animator.SetBool("isNotOnDock", true);
     }
+
     private void OnCollisionStay(Collision collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Boat")
         {
-            if (Input.GetKey(KeyCode.T))
-            {
-                transform.LookAt(Player);
-                animator.SetBool("isBeingTalkedTo", false);
-            }
+            animator.SetBool("isWalking", false);
+            boat.isMoving = false;
+            animator.SetBool("isNotOnDock", false);
+     
         }
+    }
+    public void Move()
+    {
+        transform.position = Vector3.MoveTowards(transform.position, Dock.position, speed * Time.deltaTime);
+        transform.LookAt(Boat);
+        animator.SetBool("isLooking", false);
+        animator.SetBool("isWalking", true);
     }
 
-    private void OnCollisionExit(Collision collision)
+    void Update()
     {
-        if(collision.gameObject.tag == "Player")
+        if(counter > 0)
         {
-            transform.rotation = Quaternion.identity;
-            animator.SetBool("isBeingTalkedTo", false);
+            counter -= Time.deltaTime;
+            animator.SetBool("isLooking", false);
+           
         }
-    }
-    void FixedUpdate()
-    {
- 
+        else
+        {
+            animator.SetBool("isLooking", true);
+            counter = 20f;
+        }
+
+       if(boat.dockIsActive && boat.isMoving)
+        {
+            Move();
+        }
     }
 }

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Water
   - NPC
+  - Boat
   layers:
   - Default
   - TransparentFX
@@ -17,8 +18,8 @@ TagManager:
   - Enviroment
   - PostProcessing
   - FollowCamera
-  - 
-  - 
+  - Boat
+  - Particles
   - 
   - 
   - 

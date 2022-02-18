@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class Characters : MonoBehaviour
 {
-    [SerializeField] protected Animator animator;
+    public Animator animator;
     [SerializeField] protected Rigidbody rb;
     [SerializeField] protected AudioManager _audio;
-    
+
     //For characters that move
-    [SerializeField] protected float speed;
+    [SerializeField] protected float rotationSpeed;
+    public float speed;
     [SerializeField] protected Vector3 dir;
 
     void Start()
@@ -20,16 +21,24 @@ public class Characters : MonoBehaviour
 
     public void PlayerMovement()
     {
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
-        Vector3 direction = new Vector3(h, 0, v).normalized;
-
-        Vector3 m_Input = new Vector3(h, 0, v);
-        rb.MovePosition(transform.position + m_Input * Time.deltaTime * speed);
-
-        if (direction != Vector3.zero)
+        if(Input.GetKey(KeyCode.W))
         {
-            this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(direction), 0.15f);
+            transform.position += transform.forward * speed * Time.deltaTime;
+            animator.SetBool("isWalking", true);
+        }
+        else if (Input.GetKey(KeyCode.S))
+        {
+            transform.position += transform.forward * -1 * speed * Time.deltaTime;
+            animator.SetBool("isWalking", true);
+        }
+        else if (Input.GetKey(KeyCode.A))
+        {
+            transform.RotateAround(transform.position, transform.up, Time.deltaTime * -90f * rotationSpeed);
+            animator.SetBool("isWalking", true);
+        }
+        else if (Input.GetKey(KeyCode.D))
+        {
+            transform.RotateAround(transform.position, transform.up, Time.deltaTime * 90f * rotationSpeed);
             animator.SetBool("isWalking", true);
         }
         else
@@ -37,8 +46,9 @@ public class Characters : MonoBehaviour
             animator.SetBool("isWalking", false);
         }
 
-        if(Input.GetKey(KeyCode.R))
+        if (Input.GetKey(KeyCode.R))
         {
+            transform.position += transform.forward * speed * Time.deltaTime;
             speed = 3;
             animator.SetBool("isRunning", true);
         }
@@ -51,10 +61,9 @@ public class Characters : MonoBehaviour
 
     protected virtual void BruceMovement()
     {
-        rb.MovePosition(transform.position + speed * Time.deltaTime * dir);
         if (dir != Vector3.zero)
         {
-            this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(dir), 0.15f);
+            transform.position += dir * speed * Time.deltaTime;
             animator.SetBool("isWalking", true);
         }
         else
