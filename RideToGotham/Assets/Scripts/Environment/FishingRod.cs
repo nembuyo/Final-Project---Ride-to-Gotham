@@ -5,11 +5,21 @@ using UnityEngine;
 public class FishingRod : MonoBehaviour
 {
     [SerializeField] private GameObject fishingRod;
-    private void OnCollisionEnter(Collision collision)
+    [SerializeField] private DialogueTrigger diaTrig;
+    public bool hasFishingRod;
+
+    private void Start()
+    {
+        hasFishingRod = false;
+    }
+    private void OnCollisionExit(Collision collision)
     {
         if(collision.gameObject.tag == "Player")
         {
             fishingRod.SetActive(false);
+            diaTrig.choicesPanel.SetActive(false);
+            diaTrig.Prompter.SetActive(false);
+            hasFishingRod = true;
         }
     }
 

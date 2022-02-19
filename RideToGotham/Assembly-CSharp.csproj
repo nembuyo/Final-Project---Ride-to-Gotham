@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Audio\AudioPlayer.cs" />
     <Compile Include="Assets\Scripts\Characters\Dialogue\DialogueTrigger.cs" />
+    <Compile Include="Assets\Scripts\Environment\FishingRod.cs" />
     <Compile Include="Assets\Scripts\Events\CrossController.cs" />
     <Compile Include="Assets\Scripts\Characters\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Characters\NPC\Bruce.cs" />
@@ -74,7 +75,7 @@
     <Compile Include="Assets\Scripts\Events\LineCross.cs" />
     <Compile Include="Assets\Scripts\Environment\MoveBoat.cs" />
     <Compile Include="Assets\Scripts\Characters\Dialogue\On Screen\PrompterDisplay.cs" />
-    <Compile Include="Assets\Scripts\Environment\FishingRod.cs" />
+    <Compile Include="Assets\Scripts\Characters\Dialogue\DisappearPrompter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

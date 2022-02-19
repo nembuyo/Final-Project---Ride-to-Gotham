@@ -9,7 +9,7 @@ public class DialogueTrigger : MonoBehaviour
 {
     [SerializeField] private AudioManager _audio;
     [SerializeField] private TextAsset inkJSON;
-    [SerializeField] private GameObject Prompter;
+    public GameObject Prompter;
     [SerializeField] private bool prompterIsActive;
 
     [SerializeField] private GameObject dialoguePanel;
@@ -17,7 +17,7 @@ public class DialogueTrigger : MonoBehaviour
     [SerializeField] private TextMeshProUGUI nameText;
     [SerializeField] private Animator spriteAnim;
     [SerializeField] private Animator layoutAnim;
-    [SerializeField] private GameObject choicesPanel;
+    public GameObject choicesPanel;
 
     public Story currentStory;
 
