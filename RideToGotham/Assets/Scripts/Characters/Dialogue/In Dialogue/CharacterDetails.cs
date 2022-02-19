@@ -6,6 +6,5 @@ using UnityEngine;
 public class CharacterDetails : ScriptableObject
 {
     public string charaName;
-    public string hoverDescription;
     public Sprite icon;
 }

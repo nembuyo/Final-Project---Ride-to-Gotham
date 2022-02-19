@@ -43,4 +43,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 768976af76ac8124ba4b11987ea4e548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds: []
+  sounds:
+  - name: Forest
+    clip: {fileID: 8300000, guid: 4935a3682a2b7664a8e4a6f1fde82792, type: 3}
+    volume: 0.27
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Dialogue Start
+    clip: {fileID: 8300000, guid: f89f79912d8604d43a7d59d0bf7ebef9, type: 3}
+    volume: 1
+    pitch: 1.09
+    loop: 0
+    source: {fileID: 0}
+  - name: Yume
+    clip: {fileID: 8300000, guid: 1c45b29fe1739ad4a99cf6e1f13f73d9, type: 3}
+    volume: 0.18
+    pitch: 1.09
+    loop: 1
+    source: {fileID: 0}

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : Characters
 {
 
-    [SerializeField] DialogueManager diaman;
+    [SerializeField] DialogueTrigger diaTrig;
  
     void Start()
     {
@@ -14,9 +14,10 @@ public class Player : Characters
 
     void FixedUpdate()
     {
-        if(diaman.dialogueIsPlaying)
+        if(diaTrig.dialogueIsPlaying)
         {
             speed = 0;
+            animator.SetBool("isWalking", false);
         }
         else
         {

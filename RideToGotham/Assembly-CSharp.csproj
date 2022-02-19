@@ -56,7 +56,9 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Characters\Dialogue\DialogueTrigger.cs" />
     <Compile Include="Assets\Scripts\Characters\Dialogue\In Dialogue\CharacterDisplay.cs" />
+    <Compile Include="Assets\Scripts\Events\CrossController.cs" />
     <Compile Include="Assets\Scripts\Characters\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Characters\NPC\Bruce.cs" />
     <Compile Include="Assets\Scripts\Audio\AudioManager.cs" />
@@ -68,20 +70,17 @@
     <Compile Include="Assets\Scripts\Characters\Player\Player.cs" />
     <Compile Include="Assets\Scripts\Characters\Dialogue\On Screen\Prompter.cs" />
     <Compile Include="Assets\Scripts\Audio\Sound.cs" />
-    <Compile Include="Assets\Scripts\Characters\Dialogue\On Screen\PrompterDisplay.cs" />
-    <Compile Include="Assets\Scripts\Environment\MoveBoat.cs" />
-    <Compile Include="Assets\Scripts\Events\LineCross.cs" />
-    <Compile Include="Assets\Scripts\Events\CrossController.cs" />
-    <Compile Include="Assets\External Packages\Ink\Demos\Basic Demo\Scripts\QuitGameOnKeypress.cs" />
     <Compile Include="Assets\External Packages\Ink\Demos\Basic Demo\Scripts\BasicInkExample.cs" />
-    <Compile Include="Assets\Scripts\Characters\Dialogue\DialogueTrigger.cs" />
-    <Compile Include="Assets\Scripts\Characters\Dialogue\DialogueManager.cs" />
+    <Compile Include="Assets\External Packages\Ink\Demos\Basic Demo\Scripts\QuitGameOnKeypress.cs" />
+    <Compile Include="Assets\Scripts\Events\LineCross.cs" />
+    <Compile Include="Assets\Scripts\Environment\MoveBoat.cs" />
+    <Compile Include="Assets\Scripts\Characters\Dialogue\On Screen\PrompterDisplay.cs" />
+    <Compile Include="Assets\Scripts\Audio\AudioPlayer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
-    <None Include="Assets\Models\01-Freelancer-Arc\readme.txt" />
+    <None Include="Assets\Models\Characters\01-Freelancer-Arc\readme.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
-    <None Include="Assets\External Packages\Fantasy Forest Environment Free Sample\StandardNoCulling.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
@@ -680,11 +679,17 @@
     <Reference Include="System.Xml.Serialization">
       <HintPath>C:\Program Files\Unity\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VSCode.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+    <Reference Include="Cinemachine">
+      <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VSCode.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
@@ -707,20 +712,14 @@
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.PlasticSCM.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
-    <Reference Include="com.unity.cinemachine.editor">
-      <HintPath>Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Cinemachine">
-      <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
+    <Reference Include="Unity.PlasticSCM.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

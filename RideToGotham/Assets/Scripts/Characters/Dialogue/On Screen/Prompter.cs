@@ -6,5 +6,4 @@ using UnityEngine;
 public class Prompter : ScriptableObject
 {
     public Sprite icon;
-    public string command;
 }

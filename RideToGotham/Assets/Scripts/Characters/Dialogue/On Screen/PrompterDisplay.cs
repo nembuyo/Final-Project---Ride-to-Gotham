@@ -9,15 +9,10 @@ public class PrompterDisplay : MonoBehaviour
     public Prompter prompter;
 
     public Image iconImage;
-    public TMP_Text commandText;
-    public GameObject commandBox;
   
 
     void Start()
     {
-        commandBox.SetActive(false);
-
-        commandText.text = prompter.command;
         iconImage.sprite = prompter.icon;
     }
 

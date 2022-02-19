@@ -27,9 +27,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.09
-  m_Height: 0.15
+  m_Height: 0
   m_Direction: 1
-  m_Center: {x: 0, y: 0.08, z: 0}
+  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!114 &498846887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44,10 +44,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 5297117068781791202}
   rb: {fileID: 498846888}
-  _audio: {fileID: 0}
+  rotationSpeed: 0
   speed: 1
   dir: {x: 0, y: 0, z: 0}
+  boat: {fileID: 0}
+  Boat: {fileID: 0}
+  Dock: {fileID: 0}
   Player: {fileID: 0}
+  counter: 20
+--- !u!114 &674203201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452656692577183522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70220dfca2d3d20409982ee6e385b097, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audio: {fileID: 0}
+  inkJSON: {fileID: 4900000, guid: da44e84170236e94d9b81129d722fcb5, type: 3}
+  diaman: {fileID: 0}
+  Prompter: {fileID: 0}
+  prompterIsActive: 0
+  dialoguePanel: {fileID: 0}
+  dialogueText: {fileID: 0}
+  choicesPanel: {fileID: 0}
+  dialogueIsPlaying: 0
+  choices:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1001 &1795166318276975219
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -77,7 +105,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 427828df2a2336645955689ec23e32fb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.842
+      value: -5.437
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 427828df2a2336645955689ec23e32fb, type: 3}
       propertyPath: m_LocalPosition.y
@@ -85,7 +113,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 427828df2a2336645955689ec23e32fb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 48.267
+      value: 47.973
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 427828df2a2336645955689ec23e32fb, type: 3}
       propertyPath: m_LocalRotation.w

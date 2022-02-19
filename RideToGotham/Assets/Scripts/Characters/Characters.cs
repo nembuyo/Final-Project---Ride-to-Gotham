@@ -6,7 +6,6 @@ public class Characters : MonoBehaviour
 {
     public Animator animator;
     [SerializeField] protected Rigidbody rb;
-    [SerializeField] protected AudioManager _audio;
 
     //For characters that move
     [SerializeField] protected float rotationSpeed;
