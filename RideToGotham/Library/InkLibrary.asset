@@ -37,8 +37,10 @@ MonoBehaviour:
     parents: []
     masterInkAssets: []
     masterInkAsset: {fileID: 0}
-    includePaths: []
-    includes: []
+    includePaths:
+    - Globals.ink
+    includes:
+    - {fileID: 102900000, guid: d7eb837c630f7d449a9ad87733b46d57, type: 3}
   - compileAutomatically: 0
     inkAsset: {fileID: 102900000, guid: 1420397ac727006428374cc327d017cb, type: 3}
     jsonAssetDirectory: {fileID: 0}
@@ -50,8 +52,10 @@ MonoBehaviour:
     parents: []
     masterInkAssets: []
     masterInkAsset: {fileID: 0}
-    includePaths: []
-    includes: []
+    includePaths:
+    - Globals.Ink
+    includes:
+    - {fileID: 102900000, guid: d7eb837c630f7d449a9ad87733b46d57, type: 3}
   - compileAutomatically: 0
     inkAsset: {fileID: 102900000, guid: 1b4fffb69537f3747bc355a1c13e63fe, type: 3}
     jsonAssetDirectory: {fileID: 0}
@@ -63,8 +67,10 @@ MonoBehaviour:
     parents: []
     masterInkAssets: []
     masterInkAsset: {fileID: 0}
-    includePaths: []
-    includes: []
+    includePaths:
+    - Globals.Ink
+    includes:
+    - {fileID: 102900000, guid: d7eb837c630f7d449a9ad87733b46d57, type: 3}
   - compileAutomatically: 0
     inkAsset: {fileID: 102900000, guid: 293c5e1dbacfad746bf681f88dc0e3f8, type: 3}
     jsonAssetDirectory: {fileID: 0}
@@ -75,6 +81,29 @@ MonoBehaviour:
     todos: []
     parents: []
     masterInkAssets: []
+    masterInkAsset: {fileID: 0}
+    includePaths:
+    - Globals.Ink
+    includes:
+    - {fileID: 102900000, guid: d7eb837c630f7d449a9ad87733b46d57, type: 3}
+  - compileAutomatically: 0
+    inkAsset: {fileID: 102900000, guid: d7eb837c630f7d449a9ad87733b46d57, type: 3}
+    jsonAssetDirectory: {fileID: 0}
+    jsonAsset: {fileID: 0}
+    unhandledCompileErrors: []
+    errors: []
+    warnings: []
+    todos: []
+    parents:
+    - {fileID: 102900000, guid: c07bf99fdc3e71846ac7d5e8507b4b68, type: 3}
+    - {fileID: 102900000, guid: 1420397ac727006428374cc327d017cb, type: 3}
+    - {fileID: 102900000, guid: 1b4fffb69537f3747bc355a1c13e63fe, type: 3}
+    - {fileID: 102900000, guid: 293c5e1dbacfad746bf681f88dc0e3f8, type: 3}
+    masterInkAssets:
+    - {fileID: 102900000, guid: c07bf99fdc3e71846ac7d5e8507b4b68, type: 3}
+    - {fileID: 102900000, guid: 1420397ac727006428374cc327d017cb, type: 3}
+    - {fileID: 102900000, guid: 1b4fffb69537f3747bc355a1c13e63fe, type: 3}
+    - {fileID: 102900000, guid: 293c5e1dbacfad746bf681f88dc0e3f8, type: 3}
     masterInkAsset: {fileID: 0}
     includePaths: []
     includes: []

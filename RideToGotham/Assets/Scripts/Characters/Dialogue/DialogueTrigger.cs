@@ -4,6 +4,7 @@ using TMPro;
 using Ink.Runtime;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using Ink.UnityIntegration;
 
 public class DialogueTrigger : MonoBehaviour
 {
@@ -12,6 +13,9 @@ public class DialogueTrigger : MonoBehaviour
     public GameObject Prompter;
     [SerializeField] private bool prompterIsActive;
 
+    private DialogueVariables dialogueVariables;
+    [SerializeField] private InkFile globalsInkFile;
+     
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private TextMeshProUGUI nameText;
@@ -31,10 +35,14 @@ public class DialogueTrigger : MonoBehaviour
     [SerializeField] private GameObject[] choices;
     private TextMeshProUGUI[] choicesText;
 
+    private void Awake()
+    {
+        dialogueVariables = new DialogueVariables(globalsInkFile.filePath);
+    }
+
+
     private void Start()
     {
- 
-
         Prompter.SetActive(false);
         prompterIsActive = false;
 
@@ -74,6 +82,8 @@ public class DialogueTrigger : MonoBehaviour
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
         choicesPanel.SetActive(true);
+
+        dialogueVariables.StartListening(currentStory);
 
         Prompter.SetActive(false);
         prompterIsActive = false;
@@ -166,6 +176,8 @@ public class DialogueTrigger : MonoBehaviour
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
+
+        dialogueVariables.StopListening(currentStory);
     }
 
 

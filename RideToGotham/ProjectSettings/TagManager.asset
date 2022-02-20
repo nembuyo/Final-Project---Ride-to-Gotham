@@ -8,6 +8,8 @@ TagManager:
   - NPC
   - Boat
   - Fish
+  - FishingArea
+  - FishingBox
   layers:
   - Default
   - TransparentFX
@@ -22,7 +24,7 @@ TagManager:
   - Boat
   - Particles
   - Fish
-  - 
+  - FishingArea
   - 
   - 
   - 

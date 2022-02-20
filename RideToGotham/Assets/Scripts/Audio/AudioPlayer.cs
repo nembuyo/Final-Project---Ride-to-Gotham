@@ -10,6 +10,7 @@ public class AudioPlayer : MonoBehaviour
     {
         _audio.Play("Forest");
         _audio.Play("Yume");
+        _audio.Play("Rise06");
     }
 }
 

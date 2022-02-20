@@ -70,4 +70,9 @@ public class Characters : MonoBehaviour
             animator.SetBool("isWalking", false);
         }
     }
+
+    public void DisableMovement()
+    {
+        speed = 0;
+    }
 }
