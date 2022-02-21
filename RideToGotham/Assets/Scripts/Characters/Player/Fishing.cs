@@ -39,6 +39,7 @@ public class Fishing : MonoBehaviour
     {
         fishMan.SetActive(false);
         fishCatch.SetActive(false);
+        fishingQuery.SetActive(false);
         fishingCamera.SetActive(true);
         followCamera.SetActive(false);
         animator.SetBool("isFishing", true);
