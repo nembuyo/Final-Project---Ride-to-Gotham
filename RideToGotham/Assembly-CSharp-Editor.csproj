@@ -57,7 +57,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\External Packages\Ink\Demos\Basic Demo\Scripts\Editor\BasicInkExampleEditor.cs" />
-    <Compile Include="Assets\External Packages\LowPolyWater_Pack\Scripts\Editor\GeneratePlane.cs" />
     <Compile Include="Assets\External Packages\Nicrom\PolyPacks\Wind\Assets\Scripts\Editor\LPVegetation_MaterialInspector.cs" />
   </ItemGroup>
   <ItemGroup>

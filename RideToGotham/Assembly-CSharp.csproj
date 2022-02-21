@@ -56,28 +56,33 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Audio\AudioPlayer.cs" />
+    <Compile Include="Assets\Scripts\Audio\Scene1\AudioPlayer.cs" />
     <Compile Include="Assets\Scripts\Characters\Dialogue\DialogueTrigger.cs" />
     <Compile Include="Assets\Scripts\Environment\FishingRod.cs" />
-    <Compile Include="Assets\Scripts\Events\CrossController.cs" />
+    <Compile Include="Assets\Scripts\Events\Scene1\CrossController.cs" />
     <Compile Include="Assets\Scripts\Characters\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Characters\NPC\Bruce.cs" />
+    <Compile Include="Assets\Scripts\Characters\Player\Fishing.cs" />
     <Compile Include="Assets\Scripts\Audio\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Environment\MoveClouds.cs" />
     <Compile Include="Assets\Scripts\Characters\Characters.cs" />
+    <Compile Include="Assets\Scripts\Audio\AuidoPlayer2.cs" />
     <Compile Include="Assets\Scripts\Characters\Player\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\Characters\Dialogue\DisappearPrompter.cs" />
-    <Compile Include="Assets\External Packages\LowPolyWater_Pack\Scripts\LowPolyWater.cs" />
     <Compile Include="Assets\Scripts\Characters\Player\Player.cs" />
-    <Compile Include="Assets\Scripts\Characters\Dialogue\On Screen\Prompter.cs" />
     <Compile Include="Assets\Scripts\Audio\Sound.cs" />
     <Compile Include="Assets\External Packages\Ink\Demos\Basic Demo\Scripts\BasicInkExample.cs" />
+    <Compile Include="Assets\Scripts\Events\OminousThings.cs" />
+    <Compile Include="Assets\Scripts\Events\OminousChanger.cs" />
+    <Compile Include="Assets\Scripts\Events\OminousThings2.cs" />
     <Compile Include="Assets\External Packages\Ink\Demos\Basic Demo\Scripts\QuitGameOnKeypress.cs" />
-    <Compile Include="Assets\Scripts\Events\LineCross.cs" />
+    <Compile Include="Assets\Scripts\Events\Scene1\LineCross.cs" />
     <Compile Include="Assets\Scripts\Environment\MoveBoat.cs" />
-    <Compile Include="Assets\Scripts\Characters\Dialogue\On Screen\PrompterDisplay.cs" />
-    <Compile Include="Assets\Scripts\Characters\Player\Fishing.cs" />
     <Compile Include="Assets\Scripts\Characters\Dialogue\In Dialogue\DialogueVariables.cs" />
+    <Compile Include="Assets\Scripts\Events\LevelLoader.cs" />
+    <Compile Include="Assets\Scripts\Events\Scene1\SceneChanger.cs" />
+    <Compile Include="Assets\Scripts\Events\Holder.cs" />
+    <Compile Include="Assets\Scripts\Characters\NPC\Bruce2.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -101,6 +106,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\External Packages\Nicrom\PolyPacks\Wind\Assets\Shaders\ASE\LPW_Vegetation.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\External Packages\Customizable Skybox\Stylized Sky\Shaders\Stylized Sky.shader" />
     <None Include="Assets\External Packages\Low Poly Graveyard\Materials\vertexcolorsstandard.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\External Packages\Pixel Boxes - lowpoly\Licence.txt" />

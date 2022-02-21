@@ -4,7 +4,7 @@ using UnityEngine;
 using Ink.Runtime;
 using System.IO;
 
-public class DialogueVariables 
+public class DialogueVariables
 {
     private Dictionary<string, Ink.Runtime.Object> variables;
 
@@ -40,7 +40,7 @@ public class DialogueVariables
     private void VariableChanged(string name, Ink.Runtime.Object value)
     {
         Debug.Log($"{name} = {value}");
-        if(variables.ContainsKey(name))
+        if (variables.ContainsKey(name))
         {
             variables.Remove(name);
             variables.Add(name, value);

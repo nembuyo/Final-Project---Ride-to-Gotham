@@ -10,6 +10,7 @@ public class Characters : MonoBehaviour
     //For characters that move
     [SerializeField] protected float rotationSpeed;
     public float speed;
+    public float runningSpeed;
     [SerializeField] protected Vector3 dir;
 
     void Start()
@@ -48,12 +49,12 @@ public class Characters : MonoBehaviour
         if (Input.GetKey(KeyCode.R))
         {
             transform.position += transform.forward * speed * Time.deltaTime;
-            speed = 3;
+            speed = runningSpeed;
             animator.SetBool("isRunning", true);
         }
         else
         {
-            speed = 1;
+            speed = runningSpeed * .5f;
             animator.SetBool("isRunning", false);
         }
      }    
@@ -69,10 +70,5 @@ public class Characters : MonoBehaviour
         {
             animator.SetBool("isWalking", false);
         }
-    }
-
-    public void DisableMovement()
-    {
-        speed = 0;
     }
 }

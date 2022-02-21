@@ -8,8 +8,10 @@ public class Bruce : Characters
     [SerializeField] private MoveBoat boat;
     [SerializeField] private Transform Boat;
     [SerializeField] private Transform Dock;
+
     
     [SerializeField] private Transform Player;
+    [SerializeField] private Fishing fishing;
     [SerializeField] private float counter = 10f;
 
     private void Start()
@@ -24,9 +26,9 @@ public class Bruce : Characters
             animator.SetBool("isWalking", false);
             boat.isMoving = false;
             animator.SetBool("isNotOnDock", false);
-     
         }
     }
+
     public void Move()
     {
         transform.position = Vector3.MoveTowards(transform.position, Dock.position, speed * Time.deltaTime);
@@ -41,7 +43,6 @@ public class Bruce : Characters
         {
             counter -= Time.deltaTime;
             animator.SetBool("isLooking", false);
-           
         }
         else
         {
@@ -52,6 +53,20 @@ public class Bruce : Characters
        if(boat.dockIsActive && boat.isMoving)
         {
             Move();
+        }
+       if(fishing.caughtFish)
+        {
+            animator.SetBool("gotFish", true);
+            transform.LookAt(Player);
+        }
+       else
+        {
+            animator.SetBool("gotFish", false);
+        }
+       if(fishing.didNotCatchFish)
+        {
+            animator.SetBool("didntGetFish", false);
+            transform.LookAt(Player);
         }
     }
 }

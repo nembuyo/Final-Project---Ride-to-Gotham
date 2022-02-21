@@ -10,6 +10,8 @@ public class MoveBoat : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private LineCross lineCross;
     [SerializeField] private GameObject _dock;
+    [SerializeField] private GameObject sceneChange;
+    public GameObject scener;
     public bool dockIsActive;
     public bool isMoving;
 
@@ -18,7 +20,10 @@ public class MoveBoat : MonoBehaviour
         lineCross.onLineCross.AddListener(Stop);
         lineCross.onLineCross.AddListener(Activate);
         _dock.SetActive(false);
+        sceneChange.SetActive(false);
+        scener.SetActive(false);
     }
+
 
     public void Stop()
     {
@@ -28,6 +33,8 @@ public class MoveBoat : MonoBehaviour
     public void Activate()
     {
         _dock.SetActive(true);
+        sceneChange.SetActive(true);
+        scener.SetActive(true);
         dockIsActive = true;
         isMoving = true;
     }

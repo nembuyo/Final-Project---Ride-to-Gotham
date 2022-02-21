@@ -14,11 +14,14 @@ public class Fishing : MonoBehaviour
     [SerializeField] private float fishingTime;
     [SerializeField] private GameObject fishMan;
     [SerializeField] private bool isFishing;
+    public bool caughtFish;
+    public bool didNotCatchFish;
 
     [SerializeField] private GameObject gotFishBox;
     [SerializeField] private GameObject didNotFishBox;
     [SerializeField] private GameObject fishingQuery;
     [SerializeField] private GameObject fishingPrompter;
+    [SerializeField] private GameObject fishCatch;
 
     void Start()
     {
@@ -28,20 +31,21 @@ public class Fishing : MonoBehaviour
         fishingQuery.SetActive(false);
         fishingCamera.SetActive(false);
         fishingPrompter.SetActive(false);
-
-        Debug.Log("Press WASD or the arrow keys to move, R to run");
+        fishCatch.SetActive(false);
+        fishMan.SetActive(false);
     }
 
     public void StartFishing()
     {
+        fishMan.SetActive(false);
+        fishCatch.SetActive(false);
         fishingCamera.SetActive(true);
         followCamera.SetActive(false);
         animator.SetBool("isFishing", true);
         Fish();
         isFishing = true;
         transform.position = new Vector3(-3.17f, 0.024f, 51.001f);
-         fishingPrompter.SetActive(false);
-        characters.DisableMovement();
+        fishingPrompter.SetActive(false);
     }
 
     public void Fish()
@@ -49,13 +53,18 @@ public class Fishing : MonoBehaviour
         fishingTime -= Time.deltaTime;
         if (fishingTime <= 1)
         {
+            fishCatch.SetActive(true);
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                fishCatch.SetActive(false);
+                _audio.Play("Rise06");
                 GotFish();
             }
         }
         else if (Input.GetKeyDown(KeyCode.Space))
         {
+            fishCatch.SetActive(false);
+            _audio.Play("Downer01");
             NoFish();
         }
     }
@@ -68,15 +77,20 @@ public class Fishing : MonoBehaviour
         didNotFishBox.SetActive(false);
         fishingTime += 20;
         fishingPrompter.SetActive(false);
+
+        caughtFish = true;
     }
 
     public void NoFish()
     {
+        
         animator.SetBool("didntCatch", true);
         didNotFishBox.SetActive(true);
         gotFishBox.SetActive(false);
         fishingTime = 10;
         fishingPrompter.SetActive(false);
+
+        didNotCatchFish = true;
     }
 
     public void ContinueFishing()
@@ -84,6 +98,8 @@ public class Fishing : MonoBehaviour
         StartFishing();
         fishingQuery.SetActive(false);
         _audio.Play("Rise02");
+        didNotCatchFish = false;
+        caughtFish = false;
     }
 
     public void ExitFishing()
@@ -97,6 +113,11 @@ public class Fishing : MonoBehaviour
         didNotFishBox.SetActive(false);
         gotFishBox.SetActive(false);
         fishingPrompter.SetActive(false);
+        fishCatch.SetActive(false);
+        fishMan.SetActive(false);
+
+        didNotCatchFish = false;
+        caughtFish = false;
     }
 
     public void IsNotFishing()

@@ -50,7 +50,7 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
-  - name: Dialogue Start
+  - name: DialogueStart
     clip: {fileID: 8300000, guid: f89f79912d8604d43a7d59d0bf7ebef9, type: 3}
     volume: 1
     pitch: 1.09
@@ -58,7 +58,25 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Yume
     clip: {fileID: 8300000, guid: 1c45b29fe1739ad4a99cf6e1f13f73d9, type: 3}
-    volume: 0.18
+    volume: 0.05
     pitch: 1.09
     loop: 1
+    source: {fileID: 0}
+  - name: Rise06
+    clip: {fileID: 8300000, guid: 195ba2a5594187748a66510869d1f428, type: 3}
+    volume: 0.18
+    pitch: 1.09
+    loop: 0
+    source: {fileID: 0}
+  - name: Rise02
+    clip: {fileID: 8300000, guid: 81a1b16e3f4a33d489ab8c9cd12b6eeb, type: 3}
+    volume: 0.18
+    pitch: 1.09
+    loop: 0
+    source: {fileID: 0}
+  - name: Downer01
+    clip: {fileID: 8300000, guid: 0dbba8d5d14f71149aa7bd7b57648ee1, type: 3}
+    volume: 0.18
+    pitch: 1.09
+    loop: 0
     source: {fileID: 0}
