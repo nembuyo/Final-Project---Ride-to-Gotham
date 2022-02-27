@@ -59,8 +59,9 @@ public class Characters : MonoBehaviour
         }
      }    
 
-    protected virtual void BruceMovement()
+    protected virtual void GenericMovement()
     {
+        //For scripted events for the player, or random NPCs walking around
         if (dir != Vector3.zero)
         {
             transform.position += dir * speed * Time.deltaTime;

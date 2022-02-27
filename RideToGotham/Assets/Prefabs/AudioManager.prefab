@@ -80,3 +80,15 @@ MonoBehaviour:
     pitch: 1.09
     loop: 0
     source: {fileID: 0}
+  - name: Ede
+    clip: {fileID: 8300000, guid: 9fda8370547d5f245a5f6bf8eecda683, type: 3}
+    volume: 0.18
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Horror
+    clip: {fileID: 8300000, guid: 821568bfc9519344184c67f3c67b7c16, type: 3}
+    volume: 0.18
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}

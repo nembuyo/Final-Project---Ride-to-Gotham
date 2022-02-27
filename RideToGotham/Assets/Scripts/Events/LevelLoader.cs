@@ -9,10 +9,12 @@ public class LevelLoader : MonoBehaviour
     public GameObject loadingScreen;
     public Slider slider;
     public TextMeshProUGUI progressText;
+    public GameManager gameManager;
 
     public void LoadLevel (int sceneIndex)
     {
         StartCoroutine(LoadAsynchronously(sceneIndex));
+        gameManager.SaveGame();
     }
 
     IEnumerator LoadAsynchronously (int sceneIndex)

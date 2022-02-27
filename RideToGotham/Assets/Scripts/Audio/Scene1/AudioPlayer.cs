@@ -8,6 +8,9 @@ public class AudioPlayer : MonoBehaviour
     // Ambience and Background Music Player
     void Start()
     {
+        _audio = AudioManager._instance;
+
+        _audio.StopPlaying("Ede");
         _audio.Play("Forest");
         _audio.Play("Yume");
         _audio.Play("Rise06");

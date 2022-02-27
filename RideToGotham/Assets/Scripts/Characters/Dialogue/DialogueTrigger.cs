@@ -43,6 +43,8 @@ public class DialogueTrigger : MonoBehaviour
 
     private void Start()
     {
+        _audio = AudioManager._instance;
+
         Prompter.SetActive(false);
         prompterIsActive = false;
 

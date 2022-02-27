@@ -10,6 +10,7 @@ public class OminousChanger : MonoBehaviour
  
     void Start()
     {
+        _audio = AudioManager._instance;
         sceneBox.SetActive(false);
     }
 

@@ -5,10 +5,16 @@ using UnityEngine;
 public class MainMenu : MonoBehaviour
 {
     public GameObject panel;
+    public GameManager gameManager;
 
-    public void Quit()
+    private void Start()
     {
-        Application.Quit();
+        panel.SetActive(false);
+    }
+
+    public void GameQuit()
+    {
+        gameManager.Quit();
     }
 
     public void About()

@@ -67,12 +67,16 @@
     <Compile Include="Assets\Scripts\Audio\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Environment\MoveClouds.cs" />
     <Compile Include="Assets\Scripts\Characters\Characters.cs" />
-    <Compile Include="Assets\Scripts\Audio\AuidoPlayer2.cs" />
+    <Compile Include="Assets\Scripts\Events\QuitGame.cs" />
+    <Compile Include="Assets\Scripts\Audio\Scene2\AuidoPlayer2.cs" />
     <Compile Include="Assets\Scripts\Characters\Player\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\Characters\Dialogue\DisappearPrompter.cs" />
+    <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Characters\NPC\Bruce2.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Characters\Player\Player.cs" />
     <Compile Include="Assets\Scripts\Audio\Sound.cs" />
+    <Compile Include="Assets\Scripts\Audio\AudioPlayer3.cs" />
     <Compile Include="Assets\External Packages\Ink\Demos\Basic Demo\Scripts\BasicInkExample.cs" />
     <Compile Include="Assets\Scripts\Events\OminousThings.cs" />
     <Compile Include="Assets\Scripts\Events\OminousChanger.cs" />
@@ -83,8 +87,6 @@
     <Compile Include="Assets\Scripts\Characters\Dialogue\DialogueVariables.cs" />
     <Compile Include="Assets\Scripts\Events\LevelLoader.cs" />
     <Compile Include="Assets\Scripts\Events\Scene1\SceneChanger.cs" />
-    <Compile Include="Assets\Scripts\Events\QuitGame.cs" />
-    <Compile Include="Assets\Scripts\MainMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

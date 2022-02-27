@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class QuitGame : MonoBehaviour
 {
-
+    public GameManager gameManager;
     private void OnCollisionStay(Collision collision)
     {
         if(collision.gameObject.tag == "player")
         {
-            Application.Quit();
+            gameManager.Quit();
             Debug.Log("Quit");
         }
 

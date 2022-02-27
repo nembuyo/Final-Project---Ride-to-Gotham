@@ -8,17 +8,30 @@ public class Player : Characters
 {
 
     [SerializeField] private DialogueTrigger diaTrig;
-
-    [SerializeField] private GameObject instructionBox1;
-    [SerializeField] private GameObject instructionBox2;
+    [SerializeField] private Transform rayOrigin;
+    [SerializeField] private float maxDistance;
+    [SerializeField] private LayerMask collisionLayerMask;
 
     void Start()
     {
         Debug.Log("Press WASD or the arrow keys to move, R to run");
   
         diaTrig.dialogueIsPlaying = false;
-        instructionBox1.SetActive(true);
-        instructionBox2.SetActive(false);
+
+    }
+
+    public void RaycastDart()
+    {
+        RaycastHit hit;
+
+        var collidedWithSomething = Physics.Raycast(rayOrigin.position, transform.forward, out hit, maxDistance, collisionLayerMask);
+
+        if (collidedWithSomething)
+        {
+            Debug.Log($"This Raycast is working. it hit {hit.transform.position}");
+        }
+
+        Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward * 50) * hit.distance, Color.yellow);
     }
     private void OnCollisionStay(Collision collision)
     {
@@ -26,17 +39,6 @@ public class Player : Characters
         {
             Debug.Log("Hey! Get out of there! You're not going to catch anything in there");
         }
-    }
-
-    public void ContinueButton()
-    {
-        instructionBox1.SetActive(false);
-        instructionBox2.SetActive(true);
-    }
-
-    public void EndConvo()
-    {
-        instructionBox2.SetActive(false);
     }
 
     void FixedUpdate()
@@ -49,6 +51,7 @@ public class Player : Characters
         else
         {
             PlayerMovement();
+            RaycastDart();
         }
     }
 

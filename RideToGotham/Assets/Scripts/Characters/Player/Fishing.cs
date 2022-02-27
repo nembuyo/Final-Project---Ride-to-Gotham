@@ -25,6 +25,8 @@ public class Fishing : MonoBehaviour
 
     void Start()
     {
+        _audio = AudioManager._instance;
+
         animator = gameObject.GetComponent<Animator>();
         gotFishBox.SetActive(false);
         didNotFishBox.SetActive(false);
